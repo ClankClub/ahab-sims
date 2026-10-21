@@ -1,0 +1,31 @@
+Raw data: 20261021-0727-luna-medium-3h.json.gz
+1 run(s) of 0.125 days, owner 'busy', session size 100,000 tokens, 3% of summaries failing, outages 5% a day (78s)
+
+                                               median          p95        worst
+wake-ups a day                                  112.0        112.0        112.0
+owner messages a day                             88.0         88.0         88.0
+folds a week                                     0.00         0.00         0.00
+folds without a summary (whole run)                 0            0            0
+failed summaries (whole run)                        0            0            0
+biggest page, tokens                           12,706       12,706       12,706
+biggest session, tokens (size 100,000)          3,317        3,317        3,317
+summary length at the end, chars                    0            0            0
+longest summary, chars                              0            0            0
+input tokens a day                          1,067,432    1,067,432    1,067,432
+  of them not cached                        1,067,432    1,067,432    1,067,432
+  plus summary calls                                0            0            0
+old page: input tokens a day (est.)                 0            0            0
+old page:   not cached (est.)                       0            0            0
+first call of a wake: share cached                 0%           0%           0%
+session rows at the end                            38           38           38
+memory.db at the end, MB                          0.2          0.2          0.2
+ms a wake-up, first tenth                     5,311.0      5,311.0      5,311.0
+ms a wake-up, last tenth                     15,429.3     15,429.3     15,429.3
+fold crashes                                        0            0            0
+real model: estimated cost, $                   0.000        0.000        0.000
+real model: seconds a call                        5.3          5.3          5.3
+real model: tokens counted / estimated           1.44         1.44         1.44
+
+Broken rules: 0
+
+The old page's numbers are an estimate (about 10.7k tokens a call, only its top reused between wake-ups). The summaries are filler of a real size: what they keep isn't tested here.
