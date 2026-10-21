@@ -1,0 +1,3 @@
+Things I've learned about the world that don't depend on my owner — dated, and marked as computed where I worked them out rather than checked them.
+
+- 2027-01-05: Easter Sunday 2027 falls on 28 March, so Semana Santa runs Palm Sunday 21 March to Easter Sunday 28 March. Worked out from the computus by hand because the search tools were returning invented text; not verified against a source. It matters because Semana Santa is the busiest and most expensive week of the year in much of Spain and Mexico, Oaxaca City included.
