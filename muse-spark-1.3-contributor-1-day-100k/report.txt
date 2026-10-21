@@ -1,0 +1,31 @@
+Raw data: 20261021-0730-muse13c-100k-day.json.gz
+1 run(s) of 1 days, owner 'busy', session size 100,000 tokens, 3% of summaries failing, outages 5% a day (1,313s)
+
+                                               median          p95        worst
+wake-ups a day                                   30.0         30.0         30.0
+owner messages a day                             15.0         15.0         15.0
+folds a week                                     0.00         0.00         0.00
+folds without a summary (whole run)                 0            0            0
+failed summaries (whole run)                        0            0            0
+biggest page, tokens                           22,946       22,946       22,946
+biggest session, tokens (size 100,000)         15,578       15,578       15,578
+summary length at the end, chars                    0            0            0
+longest summary, chars                              0            0            0
+input tokens a day                          1,151,307    1,151,307    1,151,307
+  of them not cached                          463,642      463,642      463,642
+  plus summary calls                                0            0            0
+old page: input tokens a day (est.)                 0            0            0
+old page:   not cached (est.)                       0            0            0
+first call of a wake: share cached                56%          56%          56%
+session rows at the end                           156          156          156
+memory.db at the end, MB                          0.6          0.6          0.6
+ms a wake-up, first tenth                    16,937.2     16,937.2     16,937.2
+ms a wake-up, last tenth                     25,878.5     25,878.5     25,878.5
+fold crashes                                        0            0            0
+real model: estimated cost, $                   0.061        0.061        0.061
+real model: seconds a call                       16.8         16.8         16.8
+real model: tokens counted / estimated           1.01         1.01         1.01
+
+Broken rules: 0
+
+The old page's numbers are an estimate (about 10.7k tokens a call, only its top reused between wake-ups). The summaries are filler of a real size: what they keep isn't tested here.
