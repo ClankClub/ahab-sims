@@ -1,0 +1,31 @@
+Raw data: 20261021-0739-deepseek-direct-3h.json.gz
+1 run(s) of 0.125 days, owner 'busy', session size 100,000 tokens, 3% of summaries failing, outages 5% a day (78s)
+
+                                               median          p95        worst
+wake-ups a day                                   56.0         56.0         56.0
+owner messages a day                             24.0         24.0         24.0
+folds a week                                     0.00         0.00         0.00
+folds without a summary (whole run)                 0            0            0
+failed summaries (whole run)                        0            0            0
+biggest page, tokens                           12,862       12,862       12,862
+biggest session, tokens (size 100,000)          4,651        4,651        4,651
+summary length at the end, chars                    0            0            0
+longest summary, chars                              0            0            0
+input tokens a day                          1,480,008    1,480,008    1,480,008
+  of them not cached                          211,272      211,272      211,272
+  plus summary calls                                0            0            0
+old page: input tokens a day (est.)                 0            0            0
+old page:   not cached (est.)                       0            0            0
+first call of a wake: share cached                79%          79%          79%
+session rows at the end                            38           38           38
+memory.db at the end, MB                          0.4          0.4          0.4
+ms a wake-up, first tenth                     9,757.4      9,757.4      9,757.4
+ms a wake-up, last tenth                      6,317.2      6,317.2      6,317.2
+fold crashes                                        0            0            0
+real model: estimated cost, $                   0.000        0.000        0.000
+real model: seconds a call                        4.1          4.1          4.1
+real model: tokens counted / estimated           1.04         1.04         1.04
+
+Broken rules: 0
+
+The old page's numbers are an estimate (about 10.7k tokens a call, only its top reused between wake-ups). The summaries are filler of a real size: what they keep isn't tested here.
