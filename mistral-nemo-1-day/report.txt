@@ -1,0 +1,32 @@
+1 run(s) of 1 days, owner 'busy', session size 8,000 tokens, 3% of summaries failing, outages 5% a day (664s)
+
+                                               median          p95        worst
+wake-ups a day                                   24.0         24.0         24.0
+owner messages a day                             20.0         20.0         20.0
+folds a week                                     0.00         0.00         0.00
+folds without a summary (whole run)                 0            0            0
+failed summaries (whole run)                        0            0            0
+biggest page, tokens                           13,274       13,274       13,274
+biggest session, tokens (size 8,000)            6,101        6,101        6,101
+summary length at the end, chars                    0            0            0
+longest summary, chars                              0            0            0
+input tokens a day                            509,648      509,648      509,648
+  of them not cached                          509,648      509,648      509,648
+  plus summary calls                                0            0            0
+old page: input tokens a day (est.)                 0            0            0
+old page:   not cached (est.)                       0            0            0
+first call of a wake: share cached                 0%           0%           0%
+session rows at the end                           102          102          102
+memory.db at the end, MB                          0.3          0.3          0.3
+ms a wake-up, first tenth                    15,426.5     15,426.5     15,426.5
+ms a wake-up, last tenth                     47,991.8     47,991.8     47,991.8
+fold crashes                                        0            0            0
+real model: estimated cost, $                   0.015        0.015        0.015
+real model: seconds a call                       13.0         13.0         13.0
+real model: tokens counted / estimated           1.04         1.04         1.04
+
+Broken rules: 0
+
+The old page's numbers are an estimate (about 10.7k tokens a call, only its top reused between wake-ups). The summaries are filler of a real size: what they keep isn't tested here.
+
+[exited with code 0]
