@@ -1,3 +1,34 @@
-# ahab-sims
+# Ahab simulation runs
 
-Throwaway Ahab homes left behind by `scripts/simulate_sessions.py`, which runs the real Ahab heartbeat and session code against a fake clock and a fake or real model, to see how its running session behaves over days and months. Each folder is one simulated home: `memory.db` is the database, `events.log` is its event log as plain text, and most have `report.txt` and `raw-run-data.json.gz` with the run's numbers. Folder names end with the run length and the session limit (the size at which the running conversation is folded into a summary). `gibberish-run-2-days-100k/` and `gibberish-run-10-days-100k/` used a fake model that writes random words, so the text means nothing; only the sizes and structure are real. `mistral-nemo-1-day-8k/` was one day with Mistral Nemo (12B, via OpenRouter) at an 8k session against a scripted owner; it often dropped the reply format Ahab needs. `muse-spark-1.3-contributor-1-day-100k/` was one day with Meta's Muse Spark 1.3 Contributor (it keeps the facts in its notes but breaks the reply format about once a wake), and `deepseek-v4.1-flash-low-3-hours-100k/` was three hours with DeepSeek V4.1 Flash on low reasoning through OpenRouter (clean format, under a cent). OpenRouter replaced names and cities with placeholders like `[ADDRESS]` on the DeepSeek and Nemo runs, so the runs through DeepSeek's own API are the clean ones: `deepseek-flash-direct-high-3-hours-100k/` repeats the three-hour run, and `deepseek-flash-direct-high-1-day-10k/` was the first with the seeded owner, questions asked after each fold, the home's own file tools running for real and the real dream (one fold, four questions right, one dream entry). "High" there means DeepSeek's default, thinking on at high effort; the first runs did not record it, but it is what they used. `luna-medium-3-hours-100k/` ran Luna through Codex at medium reasoning and was cut short by rate-limit errors (HTTP 429), and Codex also loaded a project instructions file into it, so treat it as contaminated. `fake-model-batches/` holds only the raw numbers from the free all-fake runs (quiet, busy and torture owners, 30 days to years, sessions from 30k to 100k).
+An archive of experiments with [Ahab](https://github.com/ClankClub/ahab), a persistent personal assistant. These runs exercise Ahab's real heartbeat and session machinery using a simulated clock, a scripted owner, and either a real language model or a fake one. The goal is to observe what happens across repeated wake-ups, interruptions, long-running sessions, and memory operations.
+
+The simulator is developed with Ahab; **this repository preserves the outputs**, including incomplete runs and failures. Simulated hours or days are not the same as wall-clock runtime.
+
+## What's in a run
+
+- `events.log` — readable timeline of wake-ups, messages, reasoning, tool calls, and errors.
+- `memory.db` — SQLite state for the simulated agent.
+- `workspace/` and `notes.md` — saved workspace files and the agent's surviving notes.
+- `report.txt` — a summary of session size, caching, timing, failures, and related metrics (where available).
+- `raw-run-data.json.gz` — compressed run metrics (where available).
+
+Most run folders are named for the model, duration, and session token limit. The session limit is the size at which the conversation is folded into a summary. Some folders have additional model/provider or reasoning settings in their names.
+
+## Saved experiments
+
+| Run | Notes |
+| --- | --- |
+| `deepseek-flash-direct-high-1-day-10k/` | Direct DeepSeek API; one simulated day, 10k-token session. Seeded owner, a session fold, recall questions, real file tools, and a dream entry. |
+| `deepseek-flash-direct-high-3-hours-100k/` | Direct DeepSeek API; three simulated hours, 100k-token session. |
+| `deepseek-v4.1-flash-low-3-hours-100k/` | DeepSeek through OpenRouter with low reasoning; three simulated hours. |
+| `muse-spark-1.3-contributor-1-day-100k/` | Meta Muse Spark through OpenRouter; one simulated day. |
+| `mistral-nemo-1-day-8k/` | Mistral Nemo through OpenRouter; one simulated day, 8k-token session. |
+| `luna-medium-3-hours-100k/` | Luna through Codex at medium reasoning; interrupted by rate limits and affected by injected project instructions. |
+| `gibberish-run-2-days-100k/`, `gibberish-run-10-days-100k/` | Fake models generating meaningless words; useful for structural and storage stress, not semantic evaluation. |
+| `fake-model-batches/` | Compressed metrics from larger fake-model stress tests, including quiet, busy, and torture workloads. |
+
+## How to interpret the results
+
+These are exploratory runs, **not controlled rankings of model quality**. Their context limits, durations, reasoning settings, providers, and simulated faults differ. Some runs contain corrupted tool responses or provider-side substitutions such as `[ADDRESS]`; others have reply-format failures. A report showing zero broken rules does not necessarily mean that file writes, reminders, or remembered commitments succeeded.
+
+Start with a run's `report.txt` for scope and metrics, then check `events.log` and the saved workspace for what actually happened. Estimated token counts and costs should be treated as estimates where the report labels them that way. Synthetic owner details are part of the tests, not the maintainer's personal data.
