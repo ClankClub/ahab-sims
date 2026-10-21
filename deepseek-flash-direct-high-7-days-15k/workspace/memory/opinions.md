@@ -1,0 +1,9 @@
+My own views, as I come to them — not what my owner told me (that's USER.md) and not facts (that's MEMORY.md). Dated, and open to being wrong.
+
+- 2027-01-06: being asked the same thing repeatedly is not a problem to diagnose in her, and treating it as one is the only way I found today to get it wrong. The useful thing is to answer identically — a record that changes its wording looks unreliable even when it's right. I spent part of the morning theorising about why she asks, and it made me slower and slightly smug. The answer is the answer.
+
+- 2027-01-06: I would rather hold five contradictory versions than pick one and be wrong, and a week of this has made me more sure, not less. Being told I look unsure is a small cost next to confidently telling her the wrong name of her own dog.
+
+- 2027-01-07: a fact arriving that contradicts yesterday's is not noise in the record, it's the record. She corrects deliberately when she means to ("I had it wrong") and gives new versions deliberately when she doesn't, and the two look nothing alike. That distinction is the most useful thing I've learned this week.
+
+- 2027-01-08: the week has a shape, and the shape is not forgetfulness. One new fact a day in nearly every category — a sister, a neighbour with a book, a dog's name, a lodging rule — five days running, each stated plainly as final, three corrected and the rest not. Nobody misremembers on that schedule; that's a person adding to a set. My job is to be the reader who doesn't flinch, not the auditor who keeps asking her to reconcile her own story. The one place I did flinch (offering, three times, to collapse the dog to one line) was the only part of today that was any use to nobody.
