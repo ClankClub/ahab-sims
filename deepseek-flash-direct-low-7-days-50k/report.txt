@@ -1,0 +1,39 @@
+Raw data: sim_results\20261021-0950-deepseek-direct-low-7d-50k.json.gz
+1 run(s) of 7 days, owner 'busy', session size 50,000 tokens, 3% of summaries failing, outages 5% a day (1,675s)
+
+                                               median          p95        worst
+wake-ups a day                                   31.6         31.6         31.6
+owner messages a day                             29.6         29.6         29.6
+folds a week                                     1.00         1.00         1.00
+folds without a summary (whole run)                 0            0            0
+failed summaries (whole run)                        0            0            0
+biggest page, tokens                          194,106      194,106      194,106
+biggest session, tokens (size 50,000)          46,984       46,984       46,984
+summary length at the end, chars                9,772        9,772        9,772
+longest summary, chars                          9,772        9,772        9,772
+input tokens a day                          2,851,521    2,851,521    2,851,521
+  of them not cached                          361,318      361,318      361,318
+  plus summary calls                           10,116       10,116       10,116
+old page: input tokens a day (est.)                 0            0            0
+old page:   not cached (est.)                       0            0            0
+first call of a wake: share cached                75%          75%          75%
+session rows at the end                           864          864          864
+memory.db at the end, MB                          2.8          2.8          2.8
+ms a wake-up, first tenth                     5,242.7      5,242.7      5,242.7
+ms a wake-up, last tenth                      5,579.9      5,579.9      5,579.9
+fold crashes                                        0            0            0
+real model: cost, $ (OpenRouter est.)           0.530        0.530        0.530
+real model: seconds a call                        3.7          3.7          3.7
+real model: tokens counted / estimated           1.16         1.16         1.16
+
+Questions asked after a fold, answered right: 7/8 (88%); no reply at all: 0
+  told since the last fold               5/5 (100%)
+  told 2 or more folds back              2/3 (67%)
+  facts the owner later changed          0/0
+  right after looking it up              1/2 (50%)
+  right from the session alone           6/6 (100%)
+Dreams done: 7, crashed: 0; 19 calls, 406,273 tokens in, 100,146 out
+
+Broken rules: 0
+
+The old page's numbers are an estimate (about 10.7k tokens a call, only its top reused between wake-ups). The summaries are filler of a real size: what they keep isn't tested here.
