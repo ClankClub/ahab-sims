@@ -28,6 +28,7 @@ Most run folders are named for the model, duration, and session token limit. The
 | `muse-spark-1.3-contributor-1-day-100k/` | Meta Muse Spark through OpenRouter; one simulated day. |
 | `mistral-nemo-1-day-8k/` | Mistral Nemo through OpenRouter; one simulated day, 8k-token session. |
 | `luna-medium-3-hours-100k/` | Luna through Codex at medium reasoning; interrupted by rate limits and affected by injected project instructions. |
+| `gemma-4-e2b-local-1-day-16k/` | Gemma 4 E2B (q4_0) on a local llama.cpp server with reasoning on and a 1,024-token budget; one simulated day, quiet owner, 16k-token session. 6 wake-ups and 3 owner messages a day, no folds, one dream, no broken rules. About 20 seconds a call; no cost. No `events.log`: this copy of the simulator doesn't write one, so the events are in `memory.db`'s events table. |
 | `gibberish-run-2-days-100k/`, `gibberish-run-10-days-100k/` | Fake models generating meaningless words; useful for structural and storage stress, not semantic evaluation. |
 | `fake-model-batches/` | Compressed metrics from larger fake-model stress tests, including quiet, busy, and torture workloads. |
 

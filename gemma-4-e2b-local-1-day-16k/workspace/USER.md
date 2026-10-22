@@ -1,0 +1,3 @@
+# USER
+
+*What you know about the person you work for. You're getting to know someone, not keeping a file on them: write down what helps you help them and leave out what doesn't. Add things when you learn something that will still be true next month, fix them when they turn out to be wrong, and remove them when they stop being true. Your owner can read this, so write it the way you'd want to be described.*
