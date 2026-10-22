@@ -1,0 +1,33 @@
+Raw data: raw-run-data.json.gz
+1 run(s) of 1 days, owner 'quiet', session size 16,000 tokens, 3% of summaries failing, outages 5% a day (229s)
+
+                                               median          p95        worst
+wake-ups a day                                   10.0         10.0         10.0
+owner messages a day                              4.0          4.0          4.0
+folds a week                                     0.00         0.00         0.00
+folds without a summary (whole run)                 0            0            0
+failed summaries (whole run)                        0            0            0
+biggest page, tokens                            9,617        9,617        9,617
+biggest session, tokens (size 16,000)           2,446        2,446        2,446
+summary length at the end, chars                    0            0            0
+longest summary, chars                              0            0            0
+input tokens a day                             96,147       96,147       96,147
+  of them not cached                           13,780       13,780       13,780
+  plus summary calls                                0            0            0
+old page: input tokens a day (est.)                 0            0            0
+old page:   not cached (est.)                       0            0            0
+first call of a wake: share cached                82%          82%          82%
+session rows at the end                            24           24           24
+memory.db at the end, MB                          0.2          0.2          0.2
+ms a wake-up, first tenth                    25,843.1     25,843.1     25,843.1
+ms a wake-up, last tenth                     10,856.4     10,856.4     10,856.4
+fold crashes                                        0            0            0
+real model: cost, $ (not priced)                0.000        0.000        0.000
+real model: seconds a call                       17.5         17.5         17.5
+real model: tokens counted / estimated           1.09         1.09         1.09
+Model calls: 13 tried, 0 failed, 13 answered
+Dreams done: 1, crashed: 0, failed inside dream() and caught: 0; 1 calls, 6,435 tokens in, 1,755 out
+
+Broken rules: 0
+
+The old page's numbers are an estimate (about 10.7k tokens a call, only its top reused between wake-ups). The summaries are filler of a real size: what they keep isn't tested here.
